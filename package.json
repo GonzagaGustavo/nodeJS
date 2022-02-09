@@ -4,21 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gustavo13132/nodeJS.git"
   },
-  "author": "Gustavo Gonzaga",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Gustavo13132/nodeJS/issues"
   },
   "homepage": "https://github.com/Gustavo13132/nodeJS#readme",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "mongoose": "^6.1.10",
-    "nodemon": "^2.0.15"
+    "mongoose": "^6.2.1"
   }
 }
