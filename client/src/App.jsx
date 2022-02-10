@@ -2,7 +2,7 @@ import "./App.css";
 import CriarUsuario from "./Components/CriarUsuario";
 import EditarUsuario from "./Components/EditarUsuario";
 import ListadeUsuarios from "./Components/ListadeUsuarios";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -12,13 +12,11 @@ function App() {
           <a href="/">Início</a>
           <a href="CriarUsuario">Criar Usuário</a>
         </div>
-        <Route path="/" exact render={() => {
-          return (
-            <ListadeUsuarios />
-          )
-        }} />
-        <Route path="/CriarUsuario" exact component={CriarUsuario} />
-        <Route path="/EditarUsuario" exact component={<EditarUsuario />} />
+        <Routes>
+        <Route path="/" exact element={<ListadeUsuarios />} />
+        <Route path="/CriarUsuario" exact element={<CriarUsuario />} />
+        <Route path="/EditarUsuario/:id" exact element={<EditarUsuario />} />
+        </Routes>
       </div>
     </Router>
   );

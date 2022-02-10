@@ -28,7 +28,7 @@ function CriarUsuario() {
       onChange={(e) => setName(e.target.value)}
       />
       <br />
-      <input type="text" placeholder="email" 
+      <input type="email" placeholder="email" 
       value={email}
       onChange={(e) => setEmail(e.target.value)}
       />
